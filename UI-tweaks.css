@@ -1,0 +1,89 @@
+/*
+Desc: UI-Tweaks for the Obsidian application.
+      Should be used with the minimal theme.
+
+Auth: Nicklas Vraa
+*/
+
+body {
+    --radius-m: 0;
+    --input-radius: 0;
+}
+body:not(.is-mobile) .modal {
+    border: none;
+}
+.prompt {
+    border: none;
+    border-radius: 0px;
+}
+.modal {
+    border-radius: 0px;
+}
+.side-dock-ribbon {
+    display:block;
+}
+.minimal-status-off .status-bar {
+    background-color: #3b4252;
+    border-top: 0px;
+    color: #D8DEE9;
+    padding-top: 3px;
+}
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-reading-view>.markdown-preview-view {
+    padding-top: 0px;
+    margin-top: 10px;
+}
+.workspace-ribbon.mod-left {
+    width: 20px;
+}
+.mod-root .workspace-tab-header-container-inner {
+    padding-left: 6px;
+    margin-top: 0px;
+}
+.workspace .mod-root .workspace-tab-header {
+    padding: 0px;
+}
+.mod-root .workspace-tab-header-inner {
+    padding: 2px 6px 0 12px;
+}
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-contentContainer,
+.markdown-reading-view .markdown-preview-view:not(.is-readable-line-width)>.markdown-preview-sizer {
+    margin: 0 0 0 20px !important;
+}
+.graph-view.color-fill-tag {
+    color: white !important; /* fdbe38  #ffff00*/
+    opacity: 1;
+}
+.graph-view.color-fill-attachment {
+    color: white !important;
+    opacity: 1;
+}
+.graph-view.color-line {
+    color: white !important;
+    opacity: 0.1;
+}
+img {
+    display: block !important;
+    margin: 10px auto !important;
+}
+.markdown-source-view.mod-cm6 .cm-content > * {
+    margin: auto auto !important;
+}
+figcaption {
+    text-align: center !important;
+    font-size: 0.8em !important;
+}
+table {
+    margin-left: auto !important;
+    margin: 10px auto !important;
+}
+.cm-strikethrough {
+    text-decoration: none !important;
+}
+.cm-quote {
+    opacity: 50% !important;
+}
+.cm-s-obsidian span.cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder{
+    font-style: normal;
+}

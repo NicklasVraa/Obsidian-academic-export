@@ -1,0 +1,191 @@
+/*
+Desc: Style obsidian-notes to look like academic papers when exported as pdf.
+      Include this file in your obsidian snippets folder and activate within obsidian.
+
+Auth: Nicklas Vraa
+*/
+
+@media print {
+
+    /* Document-wide. ---------------------------------------------------------------------- */
+    @page { /* Page structure. */
+        margin: 2cm !important;
+    }
+    a:link, a:visited, a { /* Links. */
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    /* Main body of text. ------------------------------------------------------------------ */
+    body {
+        tab-size: 4 !important;
+        --code-background: white !important;
+        --code-normal: black !important;
+    }
+    p {
+        font-family: "Latin Modern Roman" !important;
+        font-size: 11pt !important;
+        text-align: justify !important;
+        line-height: 1.1 !important;
+        margin-top: 5px !important;
+    }
+    strong {
+        font-weight: bold !important;
+    }
+
+    /* Titles, subtitle and credits. ------------------------------------------------------- */
+    h1 { /* Title. */
+        font-family: "Latin Modern Roman Caps" !important;
+        text-align: center !important;
+        font-size: 18pt !important;
+        font-weight: normal !important;
+        margin-top: 0px !important;
+        counter-reset: H2;
+    }
+    h6 { /* Subtitle. */
+        font-family: "Latin Modern Roman Caps" !important;
+        text-align: center !important;
+        font-size: 11pt !important;
+        font-weight: normal !important;
+        margin-top: 6px !important;
+    }
+    del { /* Credits, i.e. author information. */
+        font-family: "Latin Modern Roman" !important;
+        display: block !important;
+        text-align: center !important;
+        font-size: 10pt !important;
+        text-decoration: none;
+        margin-top: 8px !important;
+        padding-bottom: 10px !important;
+    }
+
+    /* Header styling and automatic numbering. --------------------------------------------- */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Latin Modern Roman" !important;
+        color: black !important;
+        page-break-after:avoid;
+        page-break-inside:avoid;
+        font-size: 12pt !important;
+        font-weight: bold !important;
+        line-height: 1 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 20px !important;
+    }
+    h2:before {
+        counter-increment: H2;
+        content: counter(H2) ". \0000a0";
+    }
+    h2 {counter-reset: H3;}
+    h3:before {
+        counter-increment: H3;
+        content: counter(H2) "." counter(H3) ". \0000a0";
+    }
+    h3 {counter-reset: H4;}
+    h4:before {
+        counter-increment: H4;
+        content: counter(H2) "." counter(H3) "." counter(H4) ". \0000a0";
+    }
+
+    /* Code and math blocks. --------------------------------------------------------------- */
+    pre { /* background and border of block. */
+        background-color: #fff !important;
+        border-style: dashed !important;
+        border-radius: 0px !important;
+        border-width: 1px 0px !important;
+        border-color: darkgray !important;
+        line-height: 1 !important;
+    }
+    code {
+        font-family: "Latin Modern Mono" !important;
+        font-size: 10pt !important;
+        color: #292929 !important;
+    }
+    mjx-math {
+        font-size: 90% !important;
+    }
+    math-block {
+        page-break-before: avoid !important;
+    }
+
+    /* Figures. ---------------------------------------------------------------------------- */
+    svg, img {
+        display: block !important;
+        filter: invert(100%) !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        margin: 10px auto 5px !important;
+    }
+    figcaption {
+        font-family: "Latin Modern Roman" !important;
+        text-align: center !important;
+        margin-bottom: 16px !important;
+        font-size: 8pt !important;
+    }
+
+    /* Tables. ----------------------------------------------------------------------------- */
+    table, pre {
+        page-break-inside: avoid !important;
+    }
+    table {
+        font-family: Times !important;
+        font-size: 10pt !important;
+        text-align: center !important;
+        margin: 10px auto 5px !important;
+        border-top: 1px solid #292929 !important;
+        border-bottom: 1px solid #292929 !important;
+    }
+    th { /* Table headers. */
+        color: black !important;
+        font-weight: normal !important;
+        border: none !important;
+        border-bottom: 1px solid darkgray !important;
+        padding: 2px 5px !important;
+    }
+    td {
+        border: none !important;
+        padding: 2px 5px !important;
+    }
+
+    /* Lists ------------------------------------------------------------------------------- */
+    ul, ol, dl {
+        page-break-before: avoid !important;
+        font-family: "Latin Modern Roman" !important;
+        font-size: 11pt !important;
+        line-height: 1.1 !important;
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+    }
+    ul li { /* Adjusts size of bullet points. */
+        list-style-type: none !important;
+        position: relative !important;
+    }
+    ul li::before {
+        content: '•' !important;
+        position: absolute !important;
+        left: -1.15em !important;
+        top: -0.05em !important;
+        font-size: 1.1em !important;
+    }
+
+    /* Horizontal separator. --------------------------------------------------------------- */
+    hr { /* Manual page-break using "---". */
+        border: none !important;
+        border-top: 0px solid lightgray !important;
+        page-break-after: always !important;
+    }
+
+    /* Additional settings. ---------------------------------------------------------------- */
+    blockquote {
+        display: block !important;
+        text-align: center !important;
+        font-size: 10pt !important;
+        color: black !important;
+        border: none !important;
+        padding: 0px !important;
+        margin: 5px auto !important;
+    }
+    .mermaid { /* Inline diagrams. */
+        color: black !important;
+    }
+}
