@@ -33,32 +33,6 @@ Auth: Nicklas Vraa
         font-weight: bold !important;
     }
 
-    /* Titles, subtitle and credits. ------------------------------------------------------- */
-    h1 { /* Title. */
-        font-family: "Latin Modern Roman Caps" !important;
-        text-align: center !important;
-        font-size: 18pt !important;
-        font-weight: normal !important;
-        margin-top: 0px !important;
-        counter-reset: H2;
-    }
-    h6 { /* Subtitle. */
-        font-family: "Latin Modern Roman Caps" !important;
-        text-align: center !important;
-        font-size: 11pt !important;
-        font-weight: normal !important;
-        margin-top: 6px !important;
-    }
-    del { /* Credits, i.e. author information. */
-        font-family: "Latin Modern Roman" !important;
-        display: block !important;
-        text-align: center !important;
-        font-size: 10pt !important;
-        text-decoration: none;
-        margin-top: 8px !important;
-        padding-bottom: 10px !important;
-    }
-
     /* Header styling and automatic numbering. --------------------------------------------- */
     h1, h2, h3, h4, h5, h6 {
         font-family: "Latin Modern Roman" !important;
@@ -85,6 +59,32 @@ Auth: Nicklas Vraa
     h4:before {
         counter-increment: H4;
         content: counter(H2) "." counter(H3) "." counter(H4) ". \0000a0";
+    }
+
+    /* Titles, subtitle and credits. ------------------------------------------------------- */
+    h1 { /* Title. */
+        font-family: "Latin Modern Roman Caps" !important;
+        text-align: center !important;
+        font-size: 18pt !important;
+        font-weight: normal !important;
+        margin-top: 0px !important;
+        counter-reset: H2;
+    }
+    h6 { /* Subtitle. */
+        font-family: "Latin Modern Roman Caps" !important;
+        text-align: center !important;
+        font-size: 11pt !important;
+        font-weight: normal !important;
+        margin-top: 6px !important;
+    }
+    del { /* Credits, i.e. author information. */
+        font-family: "Latin Modern Roman" !important;
+        display: block !important;
+        text-align: center !important;
+        font-size: 10pt !important;
+        text-decoration: none;
+        margin-top: 8px !important;
+        padding-bottom: 10px !important;
     }
 
     /* Code and math blocks. --------------------------------------------------------------- */
