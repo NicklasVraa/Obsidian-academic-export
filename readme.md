@@ -1,5 +1,5 @@
 # Obsidian Acadamic Export
-Here, you will find an Obsidian css-snippet, which will format pdf-exports as academic writing akin to LaTeX compilation. Simply place `academic-pdf-export.css` in your obsidian snippets folder and activate it in settings. Tested with minimal-theme. Pull-request are very welcome.
+Here you will find an Obsidian css-snippet, which will format pdf-exports as academic writing akin to LaTeX compilation. Simply place `academic-pdf-export.css` in your obsidian snippets folder and activate it in settings. Tested with minimal-theme. Pull-request are very welcome.
 
 ## Example
 To the left is shown obsidian in source mode, i.e the source code. To the right is the exported pdf.
