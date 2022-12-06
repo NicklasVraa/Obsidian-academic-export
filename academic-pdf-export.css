@@ -112,7 +112,7 @@ Auth: Nicklas Vraa
     /* Figures. ---------------------------------------------------------------------------- */
     svg, img {
         display: block !important;
-        filter: invert(100%) !important;
+        /* filter: invert(100%) !important; */
         page-break-inside: avoid !important;
         page-break-after: avoid !important;
         margin: 10px auto 5px !important;
