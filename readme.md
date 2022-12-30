@@ -12,7 +12,7 @@ To the left is shown obsidian in source mode, i.e the source code. To the right 
 | Source                           | Build                          |
 |----------------------------------|--------------------------------|
 | ![Source 1](images/source_1.png) | ![Build 1](images/build_1.png) |
-| ![Source 1](images/source_2.png) | ![Build 1](images/build_2.png) |
-| ![Source 1](images/source_3.png) | ![Build 1](images/build_3.png) |
+| ![Source 2](images/source_2.png) | ![Build 3](images/build_2.png) |
+| ![Source 3](images/source_3.png) | ![Build 3](images/build_3.png) |
 
 `UI-tweaks.css` will make Obsidian preview mode better resemble what is being exported.
