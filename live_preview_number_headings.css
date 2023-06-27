@@ -1,0 +1,44 @@
+/* -----------------------------------------------------------------------------
+Desc: Display numbers for headings, without including them in the file.
+      Only works for live preview.
+
+Auth: Nicklas Vraa
+----------------------------------------------------------------------------- */
+
+/* Numbered headings. ------------------------------------------------------- */
+.cm-content { counter-reset: H2live H3live H4live H5live H6live !important; }
+.HyperMD-header-1 { counter-reset: H2live !important; }
+
+.HyperMD-header-2 { counter-reset: H3live !important; }
+.HyperMD-header-2:before {
+    counter-increment: H2live !important;
+    content: counter(H2live) ".\0000a0\0000a0\0000a0" !important;
+}
+
+.HyperMD-header-3 { counter-reset: H4live !important; }
+.HyperMD-header-3:before {
+    counter-increment: H3live !important;
+    content: counter(H2live) "." counter(H3live) ".\0000a0\0000a0\0000a0" !important;
+}
+
+.HyperMD-header-4 { counter-reset: H5live !important; }
+.HyperMD-header-4:before {
+    counter-increment: H4live !important;
+    content: counter(H2live) "." counter(H3live) "." counter(H4live) ".\0000a0\0000a0\0000a0" !important;
+}
+
+.HyperMD-header-5 { counter-reset: H6live !important; }
+.HyperMD-header-5:before {
+    counter-increment: H5live !important;
+    content: counter(H2live) "." counter(H3live) "." counter(H4live) "." counter(H5live) ".\0000a0\0000a0\0000a0" !important;
+}
+
+.HyperMD-header-6:before {
+    counter-increment: H6live !important;
+    content: counter(H2live) "." counter(H3live) "." counter(H4live) "." counter(H5live) "." counter(H6live) ".\0000a0\0000a0\0000a0" !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+    padding-right: 2px !important;
+    display: none;
+}

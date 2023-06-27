@@ -1,0 +1,174 @@
+/* -----------------------------------------------------------------------------
+Desc: UI-Tweaks for the Obsidian application to match VSCode.
+      Should be used with the minimal theme.
+
+Auth: Nicklas Vraa
+----------------------------------------------------------------------------- */
+
+/* UI: ---------------------------------------------------------------------- */
+body {
+    /* Removes all rounded corners. */
+    --radius-m: 0;
+    --input-radius: 0;
+}
+
+body:not(.is-mobile) .modal,
+.prompt,
+.modal {
+    border: none;
+    border-radius: 0px;
+}
+
+.side-dock-ribbon {
+    display: block;
+}
+
+.side-dock-actions,
+.side-dock-settings {
+    margin-bottom: 8px;
+}
+
+.minimal-status-off .status-bar {
+    color: #D8DEE9;
+    background-color: #3b4252;
+    border-top: 0px;
+    padding-top: 3px;
+}
+
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-reading-view>.markdown-preview-view {
+    padding-top: 0px;
+    margin-top: 10px;
+}
+
+.workspace-ribbon.mod-left {
+    width: 20px;
+}
+
+.mod-root .workspace-tab-header-container-inner {
+    padding-left: 6px;
+    margin-top: 0px;
+}
+
+.workspace .mod-root .workspace-tab-header {
+    padding: 0px;
+}
+
+.mod-root .workspace-tab-header-inner {
+    padding: 2px 6px 0 12px;
+}
+
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-contentContainer,
+.markdown-reading-view .markdown-preview-view:not(.is-readable-line-width)>.markdown-preview-sizer {
+    margin: 0 0 0 20px !important;
+}
+
+.nav-file-title {
+    margin-bottom: 0px !important;
+    padding-bottom: 2px !important;
+}
+
+.nav-folder-title {
+    margin-bottom: 0px !important;
+    padding-bottom: 2px !important;
+    margin-left: -18px !important;
+}
+
+.minimal-status-off .status-bar {
+    font-size: 10pt !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+.status-bar-item {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+/* GRAPH: ------------------------------------------------------------------- */
+.graph-view.color-fill-tag {
+    color: white !important;
+    opacity: 1;
+}
+
+.graph-view.color-fill-attachment {
+    color: white !important;
+    opacity: 0.5;
+}
+
+.graph-view.color-line {
+    color: white !important;
+    opacity: 0.2;
+}
+
+.markdown-source-view.mod-cm6 .cm-content>* {
+    margin: auto auto !important;
+}
+
+/* EDITOR: ------------------------------------------------------------------ */
+
+/* Adds vertical breathing room for tables. */
+table {
+    margin: 5px 10px !important;
+}
+
+/* Adjust spacing around images. */
+img {
+    margin: 0px 0px 0px 10px !important;
+}
+
+/* Align math blocks to the left. */
+mjx-container[display="true"] {
+    text-align: left !important;
+    padding: 5px 10px !important;
+    font-size: 120%;
+}
+
+/* Makes code block language specifier less intrusive. */
+.code-block-flair {
+    font-size: 10px !important;
+    opacity: 0.5 !important;
+}
+
+.cm-line.HyperMD-codeblock {
+    padding-left: 10px !important;
+}
+
+/* Adds padding around list elements. */
+.HyperMD-list-line {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+/* Fixes indentation for bullet-point lists. */
+.cm-formatting-list-ul {
+    margin-left: -2px !important;
+}
+
+/* Fixes indentation for numbered lists. */
+.cm-formatting-list-ol {
+    margin-left: -2px !important;
+}
+
+/* Makes quote blocks less prominent. */
+.cm-quote {
+    opacity: 60% !important;
+}
+
+/* Use-case specific styling. --------------------------------------------- */
+
+@media not print {
+    /* Invert image colors for dark theme,
+    but not when exporting to PDF. */
+    img {
+        filter: invert(100%) !important;
+    }
+}
+
+/* Page break rules when exporting to PDF. */
+@media print {
+    hr {
+      page-break-after: always;
+    }
+}
