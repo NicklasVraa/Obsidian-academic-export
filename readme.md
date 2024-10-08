@@ -1,4 +1,4 @@
-# Obsidian Acadamic Export
+# Obsidian Academic Export
 **NEW**: If you are interested in making your academic writing easier, take a look at [this project](https://github.com/NicklasVraa/Latex_class_abstractions), which was made to address the limitation of this snippet-based approach.
 
 Here you will find an Obsidian css-snippet, which will format pdf-exports as academic writing akin to LaTeX compilation. Simply place `academic-pdf-export.css` in your obsidian snippets folder and activate it in settings. Check the official [guide](https://help.obsidian.md/Extending+Obsidian/CSS+snippets) for help. Tested with minimal-theme.
