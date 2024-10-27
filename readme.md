@@ -3,7 +3,7 @@
 
 Here you will find an Obsidian css-snippet, which will format pdf-exports as academic writing akin to LaTeX compilation. Simply place `academic-pdf-export.css` in your obsidian snippets folder and activate it in settings. Check the official [guide](https://help.obsidian.md/Extending+Obsidian/CSS+snippets) for help. Tested with minimal-theme.
 
-Consider this a starting point. Pull-requests and forks are very welcome.
+Consider this a starting point. Pull-requests and forks are very welcome. **I will no longer be updating the snippets myself, and new releases of obsidian may alter the output**
 
 This css-snippet uses the 'Latin Modern' font family - a LateX font clone, which may have to be installed separately, or you can simply change the fonts in the css to something else, e.g. 'Times New Roman'.
 
