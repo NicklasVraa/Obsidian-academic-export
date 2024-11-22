@@ -21,6 +21,7 @@ Auth: Nicklas Vraa
         tab-size: 4 !important;
         --code-background: white !important;
         --code-normal: black !important;
+        counter-reset: h2counter h3counter h4counter;
     }
     p {
         font-family: "Latin Modern Roman" !important;
@@ -31,6 +32,11 @@ Auth: Nicklas Vraa
     }
     strong {
         font-weight: bold !important;
+        color: black !important;
+    }
+    em {
+        font-style: italic !important;
+        color: black !important;
     }
 
     /* Header styling and automatic numbering. --------------------------------------------- */
@@ -52,7 +58,6 @@ Auth: Nicklas Vraa
         font-size: 18pt !important;
         font-weight: normal !important;
         margin-top: 0px !important;
-        counter-reset: H2;
     }
     h6 { /* Subtitle. */
         font-family: "Latin Modern Roman Caps" !important;
@@ -61,19 +66,28 @@ Auth: Nicklas Vraa
         font-weight: normal !important;
         margin-top: 6px !important;
     }
-    h2:before {
-        counter-increment: H2;
-        content: counter(H2) ". \0000a0";
+    h2 {
+        counter-increment: h2counter;
+        counter-reset: h3counter;
+        font-size: 12pt !important;
     }
-    h2 {counter-reset: H3;}
-    h3:before {
-        counter-increment: H3;
-        content: counter(H2) "." counter(H3) ". \0000a0";
+    h2::before {
+        content: counter(h2counter) ". \0000a0";
     }
-    h3 {counter-reset: H4;}
-    h4:before {
-        counter-increment: H4;
-        content: counter(H2) "." counter(H3) "." counter(H4) ". \0000a0";
+    h3 {
+        counter-increment: h3counter;
+        counter-reset: h4counter;
+        font-size: 12pt !important;
+    }
+    h3::before {
+        content: counter(h2counter) "." counter(h3counter) ". \0000a0";
+    }
+    h4 {
+        font-size: 12pt !important;
+    }
+    h4::before {
+        counter-increment: h4counter;
+        content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ". \0000a0";
     }
 
     /* Credits. ---------------------------------------------------- */
